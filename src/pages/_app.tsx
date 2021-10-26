@@ -9,13 +9,13 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Reac Avançado - Boilerplate</title>
+        <title>EDUICK</title>
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="A simple project starter to work TypeScript, React, NextJs, and Styled Components"
+          content="Whether you are a student trying to find your ideal private language teachers/tutors or a teacher trying to find great students for your customised private lessons!"
         />
       </Head>
       <GlobalStyles />
