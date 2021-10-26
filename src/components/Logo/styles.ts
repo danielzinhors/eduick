@@ -13,7 +13,7 @@ const wrapperModifiers = {
   `
 }
 
-export const Wrapper = styled.div<LogoProps>`
+export const Wrapper = styled.div<Pick<LogoProps, 'size'>>`
   ${({ size }) => css`
     ${!!size && wrapperModifiers[size]};
   `}

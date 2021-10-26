@@ -12,3 +12,9 @@ export default {
 } as Meta
 
 export const Default: Story<LogoProps> = (args) => <Logo {...args} />
+
+export const LogoNav: Story<LogoProps> = (args) => <Logo {...args} />
+
+LogoNav.args = {
+  isNav: true
+}
