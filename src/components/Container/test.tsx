@@ -6,7 +6,7 @@ describe('<Container />', () => {
   it('should render the container', () => {
     const { container } = renderWithTheme(
       <Container>
-        <span>Won games</span>
+        <span>Eduick</span>
       </Container>
     )
     expect(container.firstChild).toHaveStyleRule(
@@ -28,7 +28,7 @@ describe('<Container />', () => {
   class="c0"
 >
   <span>
-    Won games
+    Eduick
   </span>
 </div>
 `)

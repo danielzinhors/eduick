@@ -10,7 +10,7 @@ export default function Index() {
 // getServerSideProps => gerar via ssr a cada request (nunca vai para o bundle do client)
 // getInitialProps => gerar via ssr a cada request (vai para o client, faz hydrate do lado do client depois do 1 req)
 
-export function getServerSideProps() {
+/*export function getServerSideProps() {
   return {
     props: {
       /*banners: bannerSliderMock,
@@ -22,6 +22,6 @@ export function getServerSideProps() {
       upcommingMoreGames: gamesCardMock,
       freeHighligth: highligthMock,
       freeGames: gamesCardMock*/
-    }
-  }
-}
+//    }
+//  }
+//}

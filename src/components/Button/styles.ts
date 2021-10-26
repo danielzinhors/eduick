@@ -56,7 +56,7 @@ export const Wrapper = styled.button<WrapperProps>`
     align-items: center;
     justify-content: center;
     background: #ffd74f;
-    color: ${theme.colors.colorFontButton};
+    color: ${theme.colors.colorFontSecundary};
     border: 0;
     box-shadow: 1px 3px 11px -3px rgba(255, 231, 150, 0.45);
     border-radius: ${theme.border.radius};

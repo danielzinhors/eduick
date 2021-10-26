@@ -1,4 +1,4 @@
-export default {
+const theme = {
   grid: {
     container: '130rem',
     gutter: '3.2rem'
@@ -23,19 +23,19 @@ export default {
     }
   },
   colors: {
-    primary: '#F231A5',
-    secondary: '#3CD3C1',
+    primary: '#200E64',
+    secondary: '#FFD74F',
     mainBg: '#06092B',
+    gradinent: 'linear-gradient(180deg, #7A57FD 0%, #6135D7 100%);',
     lightBg: '#F2F2F2',
-    white: '#FAFAFA',
+    white: '#FFFFF',
     black: '#030517',
     lightGray: '#EAEAEA',
     gray: '#8F8F8F',
     darkGray: '#2E2F42',
     red: '#FF6347',
     menufull: '#200e64',
-    colorFontButton: '#6F48EC',
-    footer: '#200E64'
+    colorFontSecundary: '#6F48EC'
   },
   spacings: {
     xxsmall: '0.8rem',
@@ -57,4 +57,6 @@ export default {
     default: '0.3s ease-in-out',
     fast: '0.1s ease-in-out'
   }
-} as const
+}
+
+export default theme
