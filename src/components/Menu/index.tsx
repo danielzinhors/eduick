@@ -33,7 +33,7 @@ const Menu = () => {
       <S.MenuGroup>
         <MediaMatch greaterThan="medium">
           <Link href="/" passHref>
-            <Button as="a">Get Started</Button>
+            <Button>Get Started</Button>
           </Link>
         </MediaMatch>
       </S.MenuGroup>

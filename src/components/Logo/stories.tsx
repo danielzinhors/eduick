@@ -18,3 +18,9 @@ export const LogoNav: Story<LogoProps> = (args) => <Logo {...args} />
 LogoNav.args = {
   isNav: true
 }
+
+export const LogoSimples: Story<LogoProps> = (args) => <Logo {...args} />
+
+LogoSimples.args = {
+  isCompleto: false
+}
