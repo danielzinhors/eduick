@@ -38,6 +38,14 @@ const GlobalStyles: GlobalStyleComponent<
       src: local(''),
           url('/fonts/poppins-v15-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
     }
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: local(''),
+          url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    }
     * {
         margin: 0;
         padding: 0;
@@ -60,7 +68,7 @@ const GlobalStyles: GlobalStyleComponent<
         font-size: ${theme.font.sizes.medium};
         ${!removeBg &&
         css`
-          background-color: ${theme.colors.mainBg};
+          background: linear-gradient(180deg, #7a57fd 0%, #6135d7 100%);
         `}
       }
     `}

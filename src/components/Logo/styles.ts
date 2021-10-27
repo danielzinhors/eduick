@@ -2,6 +2,11 @@ import styled, { css } from 'styled-components'
 import { LogoProps } from '.'
 
 const wrapperModifiers = {
+  small: () => css`
+    width: 10rem;
+    height: 3.3rem;
+  `,
+
   normal: () => css`
     width: 34.5rem;
     height: 3.3rem;

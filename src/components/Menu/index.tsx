@@ -6,6 +6,7 @@ import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 import * as S from './styles'
 import Button from 'components/Button'
 import MediaMatch from 'components/MediaMatch'
+import Logo from 'components/Logo'
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,12 +18,17 @@ const Menu = () => {
         </S.IconWrapper>
       </MediaMatch>
       <MediaMatch greaterThan="medium">
-        <Link href="/" passHref>
-          <S.MenuLink>How it works</S.MenuLink>
-        </Link>
-        <Link href="/" passHref>
-          <S.MenuLink>About Us</S.MenuLink>
-        </Link>
+        <S.Logo>
+          <Logo size="small" isNav />
+          <>
+            <Link href="/" passHref>
+              <S.MenuLink>How it works</S.MenuLink>
+            </Link>
+            <Link href="/" passHref>
+              <S.MenuLink>About Us</S.MenuLink>
+            </Link>
+          </>
+        </S.Logo>
       </MediaMatch>
       <S.MenuGroup>
         <MediaMatch greaterThan="medium">

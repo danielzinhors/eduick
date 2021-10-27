@@ -9,8 +9,19 @@ export const Wrapper = styled.menu`
     position: relative;
     z-index: ${theme.layers.menu};
     ${media.greaterThan('medium')`
-      background: linear-gradient(180deg, #7A57FD 0%, #6135D7 100%);
+      background: transparent;
     `}
+  `}
+`
+export const Logo = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+    > div {
+      margin-left: ${theme.spacings.xsmall};
+    }
   `}
 `
 
@@ -43,12 +54,13 @@ export const MenuNav = styled.div`
 
 export const MenuLink = styled.a`
   ${({ theme }) => css`
+    color: white;
     position: relative;
-    color: ${theme.colors.white};
     font-size: ${theme.font.sizes.medium};
     margin: 0.3rem ${theme.spacings.small} 0;
     text-decoration: none;
     text-align: center;
+    font-family: 'Open Sans';
     &:hover {
       &::after {
         content: '';
