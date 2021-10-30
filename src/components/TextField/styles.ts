@@ -1,8 +1,10 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import { Backcolors, TextFieldProps } from '.'
+import { TextFieldProps } from '.'
 
 type IconPositionProps = Pick<TextFieldProps, 'iconPosition' | 'backcolors'>
-type WrapperProps = Pick<TextFieldProps, 'disabled'> & { error?: boolean }
+type WrapperProps = Pick<TextFieldProps, 'disabled'> & {
+  error?: boolean
+}
 
 export const Error = styled.p`
   ${({ theme }) => css`
@@ -32,6 +34,16 @@ const wrapperModifiers = {
         color: currentColor;
       }
     }
+  `,
+
+  blue: (theme: DefaultTheme) => css`
+    background: ${theme.colors.blue};
+    ${Icon} {
+      color: ${theme.colors.yellow};
+    }
+  `,
+  transparent: (theme: DefaultTheme) => css`
+    background: ${theme.colors.transp};
   `
 }
 
@@ -42,14 +54,6 @@ export const Wrapper = styled.div<WrapperProps>`
   `}
 `
 
-const inputModifiers = {
-  background: (theme: DefaultTheme, backcolors: Backcolors) => css`
-    ${backcolors == 'blue'
-      ? `background: ${theme.colors.blue}`
-      : `background: ${theme.colors.transp}`};
-  `
-}
-
 export const InputWrapper = styled.div<IconPositionProps>`
   ${({ theme, backcolors }) => css`
     display: flex;
@@ -57,7 +61,7 @@ export const InputWrapper = styled.div<IconPositionProps>`
     padding: 0 ${theme.spacings.xsmall};
     border: 0.2rem solid;
     border-color: ${theme.colors.lightGray};
-    ${!!backcolors && inputModifiers.background(theme, backcolors)};
+    ${!!backcolors && wrapperModifiers[backcolors](theme)}
     &:focus-within {
       box-shadow: 0 0 0.5rem ${theme.colors.primary};
     }
@@ -70,7 +74,7 @@ export const Input = styled.input<IconPositionProps>`
     font-size: ${theme.font.sizes.medium};
     padding: ${theme.spacings.xxsmall} 0;
     padding-${iconPosition}: ${theme.spacings.xsmall};
-    ${!!backcolors && inputModifiers.background(theme, backcolors)};
+    ${!!backcolors && wrapperModifiers[backcolors](theme)}
     border: 0;
     outline: none;
     width: 100%;

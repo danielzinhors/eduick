@@ -33,6 +33,10 @@ exports[`<TextField /> Renders with error 1`] = `
   background: #7955E8;
 }
 
+.c4 .c5 {
+  color: #F8F02F;
+}
+
 .c4:focus-within {
   box-shadow: 0 0 0.5rem #200E64;
 }
@@ -46,6 +50,10 @@ exports[`<TextField /> Renders with error 1`] = `
   border: 0;
   outline: none;
   width: 100%;
+}
+
+.c8 .c5 {
+  color: #F8F02F;
 }
 
 .c2 {

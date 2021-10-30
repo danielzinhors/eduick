@@ -24,6 +24,16 @@ export const Default: Story<TextFieldProps> = (args) => (
   </div>
 )
 
+export const transparent: Story<TextFieldProps> = (args) => (
+  <div style={{ maxWidth: 300, padding: 15 }}>
+    <TextField {...args} />
+  </div>
+)
+
+transparent.args = {
+  backcolors: 'transparent'
+}
+
 export const withError: Story<TextFieldProps> = (args) => (
   <div style={{ maxWidth: 300, padding: 15 }}>
     <TextField {...args} />

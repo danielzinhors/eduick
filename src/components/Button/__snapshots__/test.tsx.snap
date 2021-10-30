@@ -14,7 +14,7 @@ exports[`<Button /> should render the medium size by default 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: #ffd74f;
+  background: #F8F02F;
   color: #6F48EC;
   border: 0;
   box-shadow: 1px 3px 11px -3px rgba(255,231,150,0.45);

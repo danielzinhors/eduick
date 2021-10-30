@@ -55,7 +55,7 @@ export const Wrapper = styled.button<WrapperProps>`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #ffd74f;
+    background: ${theme.colors.yellow};
     color: ${theme.colors.colorFontSecundary};
     border: 0;
     box-shadow: 1px 3px 11px -3px rgba(255, 231, 150, 0.45);

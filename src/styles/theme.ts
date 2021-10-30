@@ -38,7 +38,8 @@ const theme = {
     menufull: '#200e64',
     colorFontSecundary: '#6F48EC',
     blue: '#7955E8',
-    transp: 'transparent'
+    transp: 'transparent',
+    yellow: '#F8F02F'
   },
   spacings: {
     xxsmall: '0.8rem',
