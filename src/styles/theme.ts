@@ -29,7 +29,7 @@ const theme = {
     story: '#06092B',
     gradinent: 'linear-gradient(180deg, #7A57FD 0%, #6135D7 100%);',
     lightBg: '#F2F2F2',
-    white: '#FFFFF',
+    white: '#FFFFFF',
     black: '#030517',
     lightGray: '#EAEAEA',
     gray: '#8F8F8F',
