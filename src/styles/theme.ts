@@ -36,7 +36,9 @@ const theme = {
     darkGray: '#2E2F42',
     red: '#FF6347',
     menufull: '#200e64',
-    colorFontSecundary: '#6F48EC'
+    colorFontSecundary: '#6F48EC',
+    blue: '#7955E8',
+    transp: 'transparent'
   },
   spacings: {
     xxsmall: '0.8rem',
