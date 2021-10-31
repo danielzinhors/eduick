@@ -1,16 +1,21 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 import { RadioProps } from '.'
 
 export const Wrapper = styled.div`
-  ${({ theme }) => css`
-    border: solid 1px ${theme.colors.white};
-    width: 162px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  `}
+  width: 162px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
+
+const InputModifiers = {
+  border: (theme: DefaultTheme) => css`
+    ${Wrapper} {
+      border: 1px solid ${theme.colors.white};
+    }
+  `
+}
 
 export const Input = styled.input`
   ${({ theme }) => css`
@@ -24,6 +29,7 @@ export const Input = styled.input`
           text-align: center;
         }
       }
+      ${InputModifiers.border(theme)}
     }
   `}
 `
