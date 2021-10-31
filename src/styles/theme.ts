@@ -39,7 +39,9 @@ const theme = {
     colorFontSecundary: '#6F48EC',
     blue: '#7955E8',
     transp: 'transparent',
-    yellow: '#F8F02F'
+    yellow: '#F8F02F',
+    yellowFocus: '#FFBC3E',
+    lilas: '#8C78EB'
   },
   spacings: {
     xxsmall: '0.8rem',

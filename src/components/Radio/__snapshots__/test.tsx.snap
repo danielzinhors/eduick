@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Radio /> should render with label (white) 1`] = `
+.c0 {
+  border: solid 1px #FFFFFF;
+  width: 162px;
+  height: 56px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  display: none;
+}
+
+.c1:checked + label:before {
+  background: #F8F02F;
+  color: #030517;
+  content: '\\2713';
+  text-align: center;
+}
+
+.c2 {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.c2:before {
+  border: 1px solid #8C78EB;
+  content: '\\00a0';
+  display: inline-block;
+  font: 16px/1em sans-serif;
+  height: 16px;
+  margin: 0 0.25em 0 0;
+  padding: 0;
+  vertical-align: top;
+  width: 16px;
+  border-radius: 50%;
+  padding-left: 2px;
+  background: #8C78EB;
+  margin-right: 20px;
+}
+
+<div
+  class="c0"
+>
+  <input
+    class="c1"
+    id="check"
+    type="radio"
+    value="anyValue"
+  />
+  <label
+    class="c2"
+    for="check"
+  >
+    Radio
+  </label>
+</div>
+`

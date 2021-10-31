@@ -50,8 +50,6 @@ const wrapperModifiers = {
   `
 }
 
-const newLocal = `linear-gradient(180deg, #FFBC3E 0%, #FFBC3E 50%)`
-
 export const Wrapper = styled.button<WrapperProps>`
   ${({ theme, size, fullWidth, hasIcon, minimal, disabled }) => css`
     display: inline-flex;
@@ -66,7 +64,9 @@ export const Wrapper = styled.button<WrapperProps>`
     text-decoration: none;
     cursor: default;
     &:hover {
-      background: ${minimal ? 'none' : newLocal};
+      background: ${minimal
+        ? 'none'
+        : `linear-gradient(180deg, ${theme.colors.yellowFocus} 0%, ${theme.colors.yellowFocus} 50%)`};
     }
     ${!!size && wrapperModifiers[size](theme)};
     ${!!fullWidth && wrapperModifiers.fullWidth()};
