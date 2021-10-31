@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 //import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
@@ -16,5 +17,13 @@ export const Content = styled.div`
 `
 
 export const SectionFooter = styled.section`
-  bottom: 0;
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.large};
+    padding-bottom: ${theme.spacings.xsmall};
+    padding-top: ${theme.spacings.xxlarge};
+    bottom: 0;
+    ${media.greaterThan('medium')`
+      padding-top: calc(${theme.spacings.xxlarge} * 2);
+    `}
+  `}
 `

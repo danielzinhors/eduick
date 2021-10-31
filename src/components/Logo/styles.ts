@@ -23,3 +23,6 @@ export const Wrapper = styled.div<Pick<LogoProps, 'size'>>`
     ${!!size && wrapperModifiers[size]};
   `}
 `
+export const Img = styled.img`
+  max-width: 100%;
+`

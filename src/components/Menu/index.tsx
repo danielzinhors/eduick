@@ -49,9 +49,7 @@ const Menu = () => {
         </S.MenuNav>
         <S.RegisterBox>
           <Link href="/" passHref>
-            <Button fullWidth size="large">
-              Get Started
-            </Button>
+            <Button fullWidth>Get Started</Button>
           </Link>
         </S.RegisterBox>
       </S.MenuFull>
