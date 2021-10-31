@@ -16,9 +16,9 @@ const Logo = ({
   <S.Wrapper size={size} aria-label="Eduick logo">
     {!isNav ? (
       !isCompleto ? (
-        <S.Img src="/img/detail.png" id={id} />
-      ) : (
         <S.Img src="/img/detailSimples.png" id={id} />
+      ) : (
+        <S.Img src="/img/detail.png" id={id} />
       )
     ) : (
       <S.Img src="/img/logoeduick.png" id={id} />

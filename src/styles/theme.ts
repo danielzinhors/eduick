@@ -25,7 +25,7 @@ const theme = {
   colors: {
     primary: '#200E64',
     secondary: '#FFD74F',
-    mainBg: 'linear-gradient(180deg, #7A57FD 0%, #6135D7 100%);',
+    mainBg: '#797af1',
     story: '#06092B',
     gradinent: 'linear-gradient(180deg, #7A57FD 0%, #6135D7 100%);',
     lightBg: '#F2F2F2',

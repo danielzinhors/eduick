@@ -68,7 +68,7 @@ const GlobalStyles: GlobalStyleComponent<
         font-size: ${theme.font.sizes.medium};
         ${!removeBg &&
         css`
-          background: linear-gradient(180deg, #7a57fd 0%, #6135d7 100%);
+          background: ${theme.colors.mainBg};
         `}
       }
     `}

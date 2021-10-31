@@ -7,7 +7,7 @@ const Home = () => (
   <S.Wrapper>
     <Base>
       <Container>
-        <Logo size="small" />
+        <Logo isCompleto={true} size="normal" />
       </Container>
     </Base>
   </S.Wrapper>
