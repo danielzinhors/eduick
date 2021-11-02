@@ -20,7 +20,7 @@ const Radio = ({
   value,
   ...props
 }: RadioProps) => {
-  const onChange = () => {
+  function onChange() {
     !!onCheck && onCheck(value)
   }
 

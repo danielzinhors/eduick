@@ -1,4 +1,4 @@
-import styled, { css, DefaultTheme } from 'styled-components'
+import styled, { css } from 'styled-components'
 import { RadioProps } from '.'
 
 export const Wrapper = styled.div`
@@ -7,15 +7,8 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 `
-
-const InputModifiers = {
-  border: (theme: DefaultTheme) => css`
-    ${Wrapper} {
-      border: 1px solid ${theme.colors.white};
-    }
-  `
-}
 
 export const Input = styled.input`
   ${({ theme }) => css`
@@ -29,7 +22,6 @@ export const Input = styled.input`
           text-align: center;
         }
       }
-      ${InputModifiers.border(theme)}
     }
   `}
 `
