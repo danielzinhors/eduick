@@ -22,11 +22,24 @@ const Home = () => (
             <TextContent content="Whether you are a student trying to find your ideal private language teachers/tutors or a teacher trying to find great students for your customised private lessons!" />
             <S.Search>
               <TextField placeholder="Type here what are you looking for" />
-              <S.Radio>
-                <Radio name="category" label="I´M A TEACHER" checked />
-                <Radio name="category" label="IM A STUDENT" />
+              <S.Select>
+                <Radio
+                  id="teacher"
+                  name="category"
+                  label="I´M A TEACHER"
+                  value="teacher"
+                  labelFor="teacher"
+                  defaultChecked
+                />
+                <Radio
+                  id="student"
+                  name="category"
+                  label="IM A STUDENT"
+                  labelFor="student"
+                  value="student"
+                />
                 <Button>SEARCH</Button>
-              </S.Radio>
+              </S.Select>
             </S.Search>
           </S.Center>
           <S.Logo>

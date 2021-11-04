@@ -44,7 +44,7 @@ const GlobalStyles: GlobalStyleComponent<
       font-weight: 600;
       font-display: swap;
       src: local(''),
-          url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+          url('/fonts/opensans-regular-webfont.woff2') format()('woff2');
     }
     * {
         margin: 0;

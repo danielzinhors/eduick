@@ -3,6 +3,7 @@ import * as BaseStyles from 'templates/Base/styles'
 import * as TextContentStyles from 'components/TextContent/styles'
 import * as TextFieldStyles from 'components/TextField/styles'
 import * as HeadingStyles from 'components/Heading/styles'
+import * as RadioStyles from 'components/Radio/styles'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
@@ -40,7 +41,17 @@ export const Center = styled.div`
     }
   }
 `
-export const Radio = styled.div``
+export const Select = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    ${RadioStyles.Wrapper} {
+      background: ${theme.colors.blue};
+      margin-right: 10px;
+    }
+  `}
+`
 
 export const Search = styled.div`
   margin-top: 60px;
