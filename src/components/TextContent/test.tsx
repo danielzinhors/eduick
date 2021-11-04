@@ -39,9 +39,5 @@ describe('<TextContent />', () => {
     expect(wrapper).toHaveStyle({
       color: '#FFFFFF' // theme.colors.white
     })
-
-    expect(wrapper).toHaveStyleRule('color', '#030517', {
-      media: '(min-width: 768px)'
-    })
   })
 })

@@ -6,11 +6,9 @@ import * as HeadingStyles from 'components/Heading/styles'
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.white};
-    ${media.greaterThan('medium')`
-      background: ${theme.colors.white};
-      padding: ${theme.spacings.medium};
-      color: ${theme.colors.black};
-    `}
+    background: ${theme.colors.transp};
+    padding: ${theme.spacings.medium};
+    font-size: 16px;
     h1,
     h2,
     h3,
@@ -21,7 +19,7 @@ export const Wrapper = styled.div`
       margin: ${theme.spacings.xsmall} 0;
       ${HeadingStyles.wrapperModifiers.lineLeft(theme, 'secondary')};
       ${media.greaterThan('medium')`
-        color: ${theme.colors.black};
+        color: ${theme.colors.white};
       `}
     }
     p {

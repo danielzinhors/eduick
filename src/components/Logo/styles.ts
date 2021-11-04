@@ -8,7 +8,7 @@ const wrapperModifiers = {
   `,
 
   normal: () => css`
-    width: 34.5rem;
+    width: 45rem;
     height: 3.3rem;
   `,
 

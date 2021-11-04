@@ -13,7 +13,7 @@ describe('<Logo />', () => {
   it('should render a normal logo when size is default', () => {
     renderWithTheme(<Logo />)
     expect(screen.getByLabelText(/Eduick logo/i)).toHaveStyle({
-      width: '34.5rem'
+      width: '45rem'
     })
   })
 
