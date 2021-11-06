@@ -31,7 +31,15 @@ export const IconWrapper = styled.div`
     cursor: pointer;
     width: 2.4rem;
     height: 2.4rem;
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: 1fr 2fr;
   `}
+`
+
+export const LogoMenu = styled.div`
+  margin-top: 5px;
+  margin-left: 10px;
 `
 
 export const MenuGroup = styled.div`
@@ -107,12 +115,14 @@ export const MenuFull = styled.nav<MenuFullProps>`
     pointer-events: ${isOpen ? 'all' : 'none'};
     > svg {
       position: absolute;
-      top: 0;
+      /* top: 0; */
       right: 0;
       margin: ${theme.spacings.xsmall};
+      margin-top: 30px;
+      margin-right: 30px;
       cursor: pointer;
-      width: 2.4rem;
-      height: 2.4rem;
+      /* width: 2.4rem; */
+      /* height: 2.4rem; */
       color: ${theme.colors.white};
     }
     ${MenuNav} {
@@ -154,3 +164,8 @@ export const RegisterBox = styled.div`
 `
 
 export const Link = styled.a``
+
+export const LogoNav = styled.div`
+  margin-left: 60px;
+  margin-top: 30px;
+`

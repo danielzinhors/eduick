@@ -4,6 +4,7 @@ import * as TextContentStyles from 'components/TextContent/styles'
 import * as TextFieldStyles from 'components/TextField/styles'
 import * as HeadingStyles from 'components/Heading/styles'
 import * as RadioStyles from 'components/Radio/styles'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
@@ -16,8 +17,12 @@ export const Wrapper = styled.main`
 
 export const Content = styled.div`
   display: grid;
-  grid-column: 3;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-column: 1;
+  grid-template-columns: 1fr;
+  ${media.greaterThan('medium')`
+    grid-column: 3;
+    grid-template-columns: 1fr 2fr 1fr;
+  `}
 `
 export const Center = styled.div`
   ${TextContentStyles.Wrapper} {
@@ -40,15 +45,26 @@ export const Center = styled.div`
       color: #ffffff;
     }
   }
+  ${media.lessThan('medium')`
+    ${TextFieldStyles.Wrapper} {
+      width: 90%;
+    }
+  `}
 `
 export const Select = styled.div`
   ${({ theme }) => css`
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: 1fr 1fr;
     margin-top: 15px;
+    ${media.greaterThan('medium')`
+      display: flex;
+      flex-direction: row;
+    `}
     ${RadioStyles.Wrapper} {
       background: ${theme.colors.blue};
       margin-right: 10px;
+      margin-bottom: 10px;
     }
   `}
 `

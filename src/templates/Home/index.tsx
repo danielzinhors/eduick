@@ -7,13 +7,16 @@ import TextContent from 'components/TextContent'
 import TextField from 'components/TextField'
 import Button from 'components/Button'
 import * as S from './styles'
+import MediaMatch from 'components/MediaMatch'
 
 const Home = () => (
   <S.Wrapper>
     <Base>
       <Container>
         <S.Content>
-          <Logo size="normal" />
+          <MediaMatch greaterThan="medium">
+            <Logo size="normal" />
+          </MediaMatch>
           <S.Center>
             <Heading size="medium">Find your</Heading>
             <Heading size="huge" color="yellow">
@@ -38,13 +41,23 @@ const Home = () => (
                   labelFor="student"
                   value="student"
                 />
-                <Button>SEARCH</Button>
+                <MediaMatch greaterThan="medium">
+                  <Button>SEARCH</Button>
+                </MediaMatch>
+                <MediaMatch lessThan="medium">
+                  <Button fullWidth={true}>SEARCH</Button>
+                </MediaMatch>
               </S.Select>
             </S.Search>
           </S.Center>
-          <S.Logo>
-            <Logo isCompleto={false} size="normal" />
-          </S.Logo>
+          <MediaMatch greaterThan="medium">
+            <S.Logo>
+              <Logo isCompleto={false} size="normal" />
+            </S.Logo>
+          </MediaMatch>
+          <MediaMatch lessThan="medium">
+            <Logo size="normal" />
+          </MediaMatch>
         </S.Content>
       </Container>
     </Base>

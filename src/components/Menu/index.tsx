@@ -14,7 +14,10 @@ const Menu = () => {
     <S.Wrapper>
       <MediaMatch lessThan="medium">
         <S.IconWrapper onClick={() => setIsOpen(true)}>
-          <MenuIcon aria-label="Open menu" />
+          <MenuIcon size={34} aria-label="Open menu" />
+          <S.LogoMenu>
+            <Logo size="large" isNav />
+          </S.LogoMenu>
         </S.IconWrapper>
       </MediaMatch>
       <MediaMatch greaterThan="medium">
@@ -38,7 +41,14 @@ const Menu = () => {
         </MediaMatch>
       </S.MenuGroup>
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
-        <CloseIcon aria-label="Close menu" onClick={() => setIsOpen(false)} />
+        <CloseIcon
+          size={34}
+          aria-label="Close menu"
+          onClick={() => setIsOpen(false)}
+        />
+        <S.LogoNav>
+          <Logo size="large" isNav />
+        </S.LogoNav>
         <S.MenuNav>
           <Link href="/" passHref>
             <S.MenuLink href="/">How it works</S.MenuLink>

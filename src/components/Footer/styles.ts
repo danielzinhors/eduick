@@ -6,7 +6,10 @@ export const Wrapper = styled.footer`
     background: ${theme.colors.primary};
     height: 9.8rem;
     ${media.greaterThan('medium')`
-      height: 25rem;
+      height: 10rem;
+    `}
+    ${media.greaterThan('huge')`
+      height: 30rem;
     `}
   `}
 `
