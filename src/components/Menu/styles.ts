@@ -31,15 +31,13 @@ export const IconWrapper = styled.div`
     cursor: pointer;
     width: 2.4rem;
     height: 2.4rem;
-    display: grid;
-    grid-column: 2;
-    grid-template-columns: 1fr 2fr;
   `}
 `
 
 export const LogoMenu = styled.div`
-  margin-top: 5px;
-  margin-left: 10px;
+  position: absolute;
+  top: 27px;
+  left: 35px;
 `
 
 export const MenuGroup = styled.div`
@@ -108,7 +106,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
     transition: opacity ${theme.transition.default};
     opacity: ${isOpen ? 1 : 0};

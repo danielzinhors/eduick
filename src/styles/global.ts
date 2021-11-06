@@ -4,7 +4,6 @@ import {
   DefaultTheme,
   GlobalStyleComponent
 } from 'styled-components'
-import media from 'styled-media-query'
 
 export type GlobalStylesProps = {
   removeBg?: boolean
@@ -72,12 +71,9 @@ const GlobalStyles: GlobalStyleComponent<
           background: ${theme.colors.mainBg};
         `}
       }
-      ${media.greaterThan('medium')`
-          main {
-            position: fixed;
-          }
-
-      `}
+      main {
+        position: relative;
+      }
     `}
 `
 

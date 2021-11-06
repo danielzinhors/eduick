@@ -2,12 +2,15 @@ import styled, { css } from 'styled-components'
 import { RadioProps } from '.'
 
 export const Wrapper = styled.div`
-  width: 162px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
+  ${({ theme }) => css`
+    width: 130px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px ${theme.colors.yellow};
+    border-radius: ${theme.border.radius};
+  `}
 `
 
 export const Input = styled.input`

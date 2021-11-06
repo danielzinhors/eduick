@@ -8,7 +8,6 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
-    min-width: 100vw !important;
     ${BaseStyles.Content} {
       z-index: ${theme.layers.base};
     }
@@ -25,55 +24,81 @@ export const Content = styled.div`
   `}
 `
 export const Center = styled.div`
-  ${TextContentStyles.Wrapper} {
-    width: 496px;
-    height: 88px;
-    left: 1065px;
-    top: 367px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 191.68%;
-  }
-  ${HeadingStyles.Wrapper} {
-    margin-left: 25px;
-  }
-  ${TextFieldStyles.Wrapper} {
-    margin-left: 5px;
-    input::placeholder {
-      color: #ffffff;
+  ${({ theme }) => css`
+    ${HeadingStyles.Wrapper} {
+      margin-left: ${theme.spacings.small};
     }
-  }
-  ${media.lessThan('medium')`
+    ${TextContentStyles.Wrapper} {
+      width: 496px;
+      height: 88px;
+      left: 1065px;
+      top: 367px;
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: normal;
+      font-size: ${theme.font.sizes.medium};
+      line-height: 191.68%;
+    }
+  `}
+`
+export const Search = styled.div`
+  ${({ theme }) => css`
+    margin-top: 60px;
     ${TextFieldStyles.Wrapper} {
-      width: 90%;
+      margin-left: ${theme.spacings.small};
+      width: 272px;
+      ${media.greaterThan('medium')`
+        width: 580px;
+      `}
+      input::placeholder {
+        color: #ffffff;
+      }
     }
+    /* margin-left: 25px; */
   `}
 `
 export const Select = styled.div`
-  ${({ theme }) => css`
-    display: grid;
-    grid-column: 2;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 15px;
-    ${media.greaterThan('medium')`
-      display: flex;
-      flex-direction: row;
-    `}
-    ${RadioStyles.Wrapper} {
-      background: ${theme.colors.blue};
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
+  ${media.greaterThan('medium')`
+    display: flex;
+    flex-direction: row;
   `}
 `
 
-export const Search = styled.div`
-  margin-top: 60px;
-  margin-left: 25px;
+export const Btn = styled.div`
+  ${({ theme }) => css`
+    width: 272px;
+    margin-left: ${theme.spacings.small};
+    margin-bottom: ${theme.spacings.xsmall};
+    ${media.greaterThan('medium')`
+      margin-top: 15px;
+      height: 56px;
+      width: 209px;
+    `}
+  `}
+`
+export const Check = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: row;
+    margin-top: ${theme.spacings.xsmall};
+    margin-left: ${theme.spacings.small};
+    ${RadioStyles.Wrapper} {
+      background: ${theme.colors.blue};
+      margin-right: 12px;
+      margin-bottom: 10px;
+      font-size: ${theme.font.sizes.xxsmall};
+      width: 130px;
+      ${media.greaterThan('medium')`
+        width: 162px;
+        height: 56px;
+      `}
+    }
+  `}
 `
 
 export const Logo = styled.div`
   margin-top: -120px;
+  ${media.lessThan('medium')`
+    margin-top: 120px;
+  `}
 `

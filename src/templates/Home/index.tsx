@@ -22,42 +22,50 @@ const Home = () => (
             <Heading size="huge" color="yellow">
               BEST TEACHER
             </Heading>
-            <TextContent content="Whether you are a student trying to find your ideal private language teachers/tutors or a teacher trying to find great students for your customised private lessons!" />
+            <MediaMatch greaterThan="medium">
+              <TextContent content="Whether you are a student trying to find your ideal private language teachers/tutors or a teacher trying to find great students for your customised private lessons!" />
+            </MediaMatch>
             <S.Search>
               <TextField placeholder="Type here what are you looking for" />
               <S.Select>
-                <Radio
-                  id="teacher"
-                  name="category"
-                  label="I´M A TEACHER"
-                  value="teacher"
-                  labelFor="teacher"
-                  defaultChecked
-                />
-                <Radio
-                  id="student"
-                  name="category"
-                  label="IM A STUDENT"
-                  labelFor="student"
-                  value="student"
-                />
-                <MediaMatch greaterThan="medium">
-                  <Button>SEARCH</Button>
-                </MediaMatch>
-                <MediaMatch lessThan="medium">
-                  <Button fullWidth={true}>SEARCH</Button>
-                </MediaMatch>
+                <S.Check>
+                  <Radio
+                    id="teacher"
+                    name="category"
+                    label="I´M A TEACHER"
+                    value="teacher"
+                    labelFor="teacher"
+                    defaultChecked
+                  />
+                  <Radio
+                    id="student"
+                    name="category"
+                    label="IM A STUDENT"
+                    labelFor="student"
+                    value="student"
+                  />
+                </S.Check>
+                <S.Btn>
+                  <MediaMatch greaterThan="medium">
+                    <Button>SEARCH</Button>
+                  </MediaMatch>
+                  <MediaMatch lessThan="medium">
+                    <Button fullWidth={true}>SEARCH</Button>
+                  </MediaMatch>
+                </S.Btn>
               </S.Select>
             </S.Search>
           </S.Center>
-          <MediaMatch greaterThan="medium">
+          {/*<MediaMatch greaterThan="medium">
             <S.Logo>
               <Logo isCompleto={false} size="normal" />
             </S.Logo>
           </MediaMatch>
           <MediaMatch lessThan="medium">
-            <Logo size="normal" />
-          </MediaMatch>
+            <S.Logo>
+              <Logo size="normal" />
+            </S.Logo>
+          </MediaMatch> */}
         </S.Content>
       </Container>
     </Base>

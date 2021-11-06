@@ -15,7 +15,7 @@ export const Content = styled.div`
 `
 
 export const SectionFooter = styled.section`
-  position: fixed;
+  /* position: fixed; */
   min-width: 100% !important;
   /* margin-top: 15rem; */
   bottom: 0;
