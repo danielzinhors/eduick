@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 import * as BaseStyles from 'templates/Base/styles'
 import * as TextContentStyles from 'components/TextContent/styles'
 import * as TextFieldStyles from 'components/TextField/styles'
 import * as HeadingStyles from 'components/Heading/styles'
 import * as RadioStyles from 'components/Radio/styles'
-import media from 'styled-media-query'
 import * as LogoStyles from 'components/Logo/styles'
+import * as ButtonStyles from 'components/Button/styles'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
@@ -64,7 +65,6 @@ export const Search = styled.div`
         color: #ffffff;
       }
     }
-    /* margin-left: 25px; */
   `}
 `
 export const Select = styled.div`
@@ -119,7 +119,103 @@ export const Logo = styled.div`
     margin-top: 50px;
     ${LogoStyles.Wrapper} {
       height: 50rem;
-      width: 35rem;
+      width: 32rem;
     }
+  `}
+`
+/*Modal*/
+export type ModalSectionProps = {
+  isOpen?: boolean
+}
+
+export const ModalSection = styled.section<ModalSectionProps>`
+  ${({ theme, isOpen }) => css`
+    height: 100vh;
+    width: 100%;
+    background: #200e64;
+    opacity: 0.95;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: ${theme.layers.modal};
+    ${!isOpen ? 'display: none' : 'display: flex'};
+    justify-content: center;
+    align-items: center;
+  `}
+`
+
+export const Modal = styled.div`
+  background: #6a40e4;
+  height: 100vh;
+  opacity: 1;
+  ${media.greaterThan('medium')`
+    width: 525px;
+    max-width: 525px;
+    height: 479px;
+  `}
+  box-sizing: border-box;
+  padding: 40px;
+  position: relative;
+`
+
+export const Fechar = styled.div`
+  background: url('/img/fechar.svg') no-repeat center center;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 30px;
+  right: 30px;
+  ${media.greaterThan('medium')`
+    top: -30px;
+    right: -30px;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+    background: #200e64 url('/img/fechar.svg') no-repeat center center;
+  `}
+  cursor: pointer;
+  color: transparent;
+`
+
+export const FirstTitle = styled.div`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.xxsmall};
+    ${media.greaterThan('medium')`
+      margin-top: ${theme.spacings.large};
+    `}
+  `}
+`
+
+export const SecondTitle = styled.div`
+  text-transform: uppercase;
+`
+
+export const Username = styled.div`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.xlarge};
+    ${TextFieldStyles.Label} {
+      color: ${theme.colors.white};
+    }
+  `}
+`
+
+export const Passwd = styled.div`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.small};
+    ${TextFieldStyles.Label} {
+      color: ${theme.colors.white};
+    }
+  `}
+`
+
+export const BtnModal = styled.div`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.small};
+    ${media.greaterThan('medium')`
+      margin-bottom: ${theme.spacings.large};
+      margin-left: 312px;
+      ${ButtonStyles.Wrapper} {
+        width: 132.52px;
+      }
+    `}
   `}
 `

@@ -46,6 +46,7 @@ const GlobalStyles: GlobalStyleComponent<
       src: local(''),
           url('/fonts/opensans-regular-webfont.woff2') format()('woff2');
     }
+
     * {
         margin: 0;
         padding: 0;

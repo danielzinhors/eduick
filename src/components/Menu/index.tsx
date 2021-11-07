@@ -8,8 +8,13 @@ import Button from 'components/Button'
 import MediaMatch from 'components/MediaMatch'
 import Logo from 'components/Logo'
 
-const Menu = () => {
+export type MenuProps = {
+  onClick?: () => void
+}
+
+const Menu = ({ onClick }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
+
   return (
     <S.Wrapper>
       <MediaMatch lessThan="medium">
@@ -36,11 +41,11 @@ const Menu = () => {
       <S.MenuGroup>
         <MediaMatch greaterThan="medium">
           <Link href="/" passHref>
-            <Button>Get Started</Button>
+            <Button onClick={onClick}>Get Started</Button>
           </Link>
         </MediaMatch>
       </S.MenuGroup>
-      <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
+      <S.MenuFull id="menufull" aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon
           size={24}
           aria-label="Close menu"
@@ -59,7 +64,9 @@ const Menu = () => {
         </S.MenuNav>
         <S.RegisterBox>
           <Link href="/" passHref>
-            <Button fullWidth>Get Started</Button>
+            <Button fullWidth onClick={onClick}>
+              Get Started
+            </Button>
           </Link>
         </S.RegisterBox>
       </S.MenuFull>

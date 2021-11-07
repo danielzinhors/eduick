@@ -7,9 +7,16 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Debugger react",
+            "name": "Debugger storybook",
             "url": "http://localhost:6006",
             "webRoot": "${workspaceFolder}"
-        }
+        },
+        {
+          "type": "pwa-chrome",
+          "request": "launch",
+          "name": "Debugger nextjs",
+          "url": "http://localhost:3000",
+          "webRoot": "${workspaceFolder}"
+      }
     ]
 }

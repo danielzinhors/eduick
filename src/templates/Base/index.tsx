@@ -5,12 +5,13 @@ import * as S from './styles'
 
 export type BaseTemplateProps = {
   children: React.ReactNode
+  onClick?: () => void
 }
 
-const Base = ({ children }: BaseTemplateProps) => (
+const Base = ({ children, onClick }: BaseTemplateProps) => (
   <S.Wrapper>
     <Container>
-      <Menu />
+      <Menu onClick={onClick} />
     </Container>
     <S.Content>{children}</S.Content>
     <S.SectionFooter>
