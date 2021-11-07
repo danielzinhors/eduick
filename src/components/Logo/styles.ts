@@ -25,4 +25,5 @@ export const Wrapper = styled.div<Pick<LogoProps, 'size'>>`
 `
 export const Img = styled.img`
   max-width: 100%;
+  max-height: 100%;
 `

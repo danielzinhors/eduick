@@ -12,11 +12,13 @@ import MediaMatch from 'components/MediaMatch'
 const Home = () => (
   <S.Wrapper>
     <Base>
+      <MediaMatch greaterThan="medium">
+        <S.LogoCompleto>
+          <Logo size="normal" />
+        </S.LogoCompleto>
+      </MediaMatch>
       <Container>
         <S.Content>
-          <MediaMatch greaterThan="medium">
-            <Logo size="normal" />
-          </MediaMatch>
           <S.Center>
             <Heading size="medium">Find your</Heading>
             <Heading size="huge" color="yellow">
@@ -56,18 +58,18 @@ const Home = () => (
               </S.Select>
             </S.Search>
           </S.Center>
-          {/*<MediaMatch greaterThan="medium">
-            <S.Logo>
-              <Logo isCompleto={false} size="normal" />
-            </S.Logo>
-          </MediaMatch>
           <MediaMatch lessThan="medium">
             <S.Logo>
               <Logo size="normal" />
             </S.Logo>
-          </MediaMatch> */}
+          </MediaMatch>
         </S.Content>
       </Container>
+      <MediaMatch greaterThan="medium">
+        <S.LogoSimples>
+          <Logo isCompleto={false} size="normal" />
+        </S.LogoSimples>
+      </MediaMatch>
     </Base>
   </S.Wrapper>
 )

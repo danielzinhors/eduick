@@ -5,10 +5,13 @@ import * as TextFieldStyles from 'components/TextField/styles'
 import * as HeadingStyles from 'components/Heading/styles'
 import * as RadioStyles from 'components/Radio/styles'
 import media from 'styled-media-query'
+import * as LogoStyles from 'components/Logo/styles'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
     ${BaseStyles.Content} {
+      display: flex;
+      flex-direction: row;
       z-index: ${theme.layers.base};
     }
   `}
@@ -20,9 +23,16 @@ export const Content = styled.div`
   grid-template-columns: 1fr;
   ${media.greaterThan('medium')`
     grid-column: 3;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   `}
 `
+export const LogoCompleto = styled.div`
+  ${LogoStyles.Wrapper} {
+    height: 50rem;
+    width: 35rem;
+  }
+`
+
 export const Center = styled.div`
   ${({ theme }) => css`
     ${HeadingStyles.Wrapper} {
@@ -86,7 +96,7 @@ export const Check = styled.div`
       background: ${theme.colors.blue};
       margin-right: 12px;
       margin-bottom: 10px;
-      font-size: ${theme.font.sizes.xxsmall};
+      font-size: ${theme.font.sizes.xsmall};
       width: 130px;
       ${media.greaterThan('medium')`
         width: 162px;
@@ -96,9 +106,20 @@ export const Check = styled.div`
   `}
 `
 
+export const LogoSimples = styled.div`
+  margin-top: -90px;
+  ${LogoStyles.Wrapper} {
+    height: 50rem;
+    width: 32rem;
+  }
+`
+
 export const Logo = styled.div`
-  margin-top: -120px;
   ${media.lessThan('medium')`
-    margin-top: 120px;
+    margin-top: 50px;
+    ${LogoStyles.Wrapper} {
+      height: 50rem;
+      width: 35rem;
+    }
   `}
 `
