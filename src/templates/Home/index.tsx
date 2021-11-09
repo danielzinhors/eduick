@@ -43,10 +43,10 @@ const Home = () => {
   }, [])
 
   useEffect(() => {
-    // if (isModalOpen) {
-    //   const menu = document.getElementById('menufull')
-    //   //menu?.setAttribute('aria-hidden', 'true')
-    // }
+    if (isModalOpen) {
+      const menu = document.getElementById('menufull')
+      menu?.setAttribute('aria-hidden', 'true')
+    }
   }, [isModalOpen])
 
   return (
