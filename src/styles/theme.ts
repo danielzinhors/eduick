@@ -42,7 +42,9 @@ const theme = {
     transp: 'transparent',
     yellow: '#F8F02F',
     yellowFocus: '#FFBC3E',
-    lilas: '#8C78EB'
+    lilas: '#8C78EB',
+    fundoNav: '#7A57FD',
+    fundoDash: '#E5E5E5'
   },
   spacings: {
     xxsmall: '0.8rem',
@@ -51,7 +53,8 @@ const theme = {
     medium: '3.2rem',
     large: '4.0rem',
     xlarge: '4.8rem',
-    xxlarge: '5.6rem'
+    xxlarge: '5.6rem',
+    huge: '6.4rem'
   },
   layers: {
     base: 10,
