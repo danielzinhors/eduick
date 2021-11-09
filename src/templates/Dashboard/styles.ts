@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import * as LogoStyles from 'components/Logo/styles'
 import * as HeadingStyles from 'components/Heading/styles'
-import * as GridStyles from 'components/Grid/styles'
+import * as TextContentStyles from 'components/TextContent/styles'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -9,9 +9,6 @@ export const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     background: ${theme.colors.fundoDash};
-    ${GridStyles.Grid} {
-      margin: 8rem 0;
-    }
   `}
 `
 
@@ -41,6 +38,71 @@ export const Logo = styled.div`
       font-size: ${theme.font.sizes.small};
     }
   `}
+`
+
+export const Link = styled.a``
+
+export const Info = styled.div`
+  ${({ theme }) => css`
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8rem;
+    background: ${theme.colors.white};
+    height: 235px;
+    width: 100%;
+    width: 1140px;
+  `}
+`
+
+export const LogoYellow = styled.div`
+  position: absolute;
+  width: 126px;
+  height: 126px;
+  left: -40px;
+  top: 25px;
+`
+
+export const InfoCenter = styled.div`
+  margin-top: 42px;
+  margin-left: 118px;
+  ${TextContentStyles.Wrapper} {
+    margin-left: -30px;
+    width: 450px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 160%;
+    color: #343434;
+  }
+`
+
+export const Titles = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+export const FirstTitle = styled.div`
+  ${HeadingStyles.Wrapper} {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    color: #000;
+  }
+`
+export const SecondTitle = styled.div`
+  margin-left: 10px;
+  ${HeadingStyles.Wrapper} {
+    color: #000;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+  }
+`
+export const Meeting = styled.div`
+  margin-top: 25px;
+  margin-left: 53px;
 `
 
 export const Footer = styled.footer`
