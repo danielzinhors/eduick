@@ -4,6 +4,7 @@ import * as HeadingStyles from 'components/Heading/styles'
 import * as TextContentStyles from 'components/TextContent/styles'
 import * as CardStyles from 'components/Card/styles'
 import * as ButtonStyles from 'components/Button/styles'
+import * as DropdownStyles from 'components/Dropdown/styles'
 
 import media from 'styled-media-query'
 
@@ -34,21 +35,46 @@ export const Nav = styled.nav`
   `}
 `
 export const NavInt = styled.div`
-  ${media.greaterThan('medium')`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  `}
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `
 
-export const Drop = styled.div`
+export const Change = styled.div`
+  display: flex;
+  flex-direction: row;
   ${media.greaterThan('medium')`
-      margin-top: 15px;
       ${ButtonStyles.Wrapper} {
+        margin-top: 15px;
         height: 3.2rem;
         background: #200E64;
         color: #ffffff;
       }
+  `}
+`
+
+export const Drop = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-top: 10px;
+  z-index: 40;
+  ${ButtonStyles.Wrapper} {
+    margin-top: 15px;
+    height: 3.2rem;
+    background: #ffffff;
+    color: #7a57fd;
+    box-shadow: 0px 32px 60px rgba(84, 95, 122, 0.08);
+  }
+  ${DropdownStyles.Wrapper} {
+    width: 100%;
+  }
+  ${media.greaterThan('medium')`
+    margin-top: 12px;
+    ${DropdownStyles.Wrapper} {
+      margin-top: 12px;
+      margin-left: 10px;
+    }
   `}
 `
 
@@ -59,7 +85,7 @@ export const Logo = styled.div`
     width: 150px;
     margin-top: 20px;
     ${LogoStyles.Wrapper} {
-      width: 20rem;
+      width: 10rem;
     }
     ${HeadingStyles.Wrapper} {
       font-family: 'Open Sans';
@@ -67,6 +93,9 @@ export const Logo = styled.div`
     }
     ${media.greaterThan('medium')`
       width: 350px;
+      ${LogoStyles.Wrapper} {
+        width: 20rem;
+      }
     `}
   `}
 `

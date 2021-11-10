@@ -9,6 +9,7 @@ import TextContent from 'components/TextContent'
 import MediaMacth from 'components/MediaMatch'
 import * as S from './styles'
 import Button from 'components/Button'
+import Dropdown from 'components/Dropdown'
 
 export type DashboardProps = {
   curses?: CardProps[]
@@ -33,11 +34,37 @@ const Dashboard = ({ curses = [] }: DashboardProps) => (
               <Heading size="small">My Classes</Heading>
             </MediaMacth>
           </S.Logo>
-          <S.Drop>
+          <S.Change>
             <MediaMacth greaterThan="medium">
               <Button size="small">Change to teacher mode</Button>
             </MediaMacth>
-          </S.Drop>
+            <S.Drop>
+              <MediaMacth greaterThan="medium">
+                <Image
+                  src="/img/avatar.png"
+                  alt="logo"
+                  width={34}
+                  height={36}
+                />
+              </MediaMacth>
+              <MediaMacth lessThan="medium">
+                <Dropdown
+                  title={
+                    <Image
+                      src="/img/avatar.png"
+                      alt="logo"
+                      width={34}
+                      height={38}
+                    />
+                  }
+                >
+                  <Button fullWidth={true} as="a">
+                    Change to teacher mode
+                  </Button>
+                </Dropdown>
+              </MediaMacth>
+            </S.Drop>
+          </S.Change>
         </S.NavInt>
       </Container>
     </S.Nav>
