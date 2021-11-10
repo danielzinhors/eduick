@@ -3,6 +3,8 @@ import * as LogoStyles from 'components/Logo/styles'
 import * as HeadingStyles from 'components/Heading/styles'
 import * as TextContentStyles from 'components/TextContent/styles'
 import * as CardStyles from 'components/Card/styles'
+import * as ButtonStyles from 'components/Button/styles'
+
 import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
@@ -29,6 +31,24 @@ export const Nav = styled.nav`
     height: ${theme.spacings.huge};
     box-shadow: 4px 2px 14px rgb(0 0 0 / 5%);
     width: 100%;
+  `}
+`
+export const NavInt = styled.div`
+  ${media.greaterThan('medium')`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  `}
+`
+
+export const Drop = styled.div`
+  ${media.greaterThan('medium')`
+      margin-top: 15px;
+      ${ButtonStyles.Wrapper} {
+        height: 3.2rem;
+        background: #200E64;
+        color: #ffffff;
+      }
   `}
 `
 

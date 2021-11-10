@@ -8,6 +8,7 @@ import Logo from 'components/Logo'
 import TextContent from 'components/TextContent'
 import MediaMacth from 'components/MediaMatch'
 import * as S from './styles'
+import Button from 'components/Button'
 
 export type DashboardProps = {
   curses?: CardProps[]
@@ -16,21 +17,28 @@ const Dashboard = ({ curses = [] }: DashboardProps) => (
   <S.Wrapper>
     <S.Nav>
       <Container>
-        <S.Logo>
-          <Link href="/" passHref>
-            <S.Link>
-              <MediaMacth greaterThan="medium">
-                <Logo isNav={true} size="normal" />
-              </MediaMacth>
-              <MediaMacth lessThan="medium">
-                <Logo isNav={true} size="small" />
-              </MediaMacth>
-            </S.Link>
-          </Link>
-          <MediaMacth greaterThan="medium">
-            <Heading size="small">My Classes</Heading>
-          </MediaMacth>
-        </S.Logo>
+        <S.NavInt>
+          <S.Logo>
+            <Link href="/" passHref>
+              <S.Link>
+                <MediaMacth greaterThan="medium">
+                  <Logo isNav={true} size="normal" />
+                </MediaMacth>
+                <MediaMacth lessThan="medium">
+                  <Logo isNav={true} size="small" />
+                </MediaMacth>
+              </S.Link>
+            </Link>
+            <MediaMacth greaterThan="medium">
+              <Heading size="small">My Classes</Heading>
+            </MediaMacth>
+          </S.Logo>
+          <S.Drop>
+            <MediaMacth greaterThan="medium">
+              <Button size="small">Change to teacher mode</Button>
+            </MediaMacth>
+          </S.Drop>
+        </S.NavInt>
       </Container>
     </S.Nav>
     <Container>
