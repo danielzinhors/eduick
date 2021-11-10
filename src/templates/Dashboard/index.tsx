@@ -6,6 +6,7 @@ import Grid from 'components/Grid'
 import Heading from 'components/Heading'
 import Logo from 'components/Logo'
 import TextContent from 'components/TextContent'
+import MediaMacth from 'components/MediaMatch'
 import * as S from './styles'
 
 export type DashboardProps = {
@@ -18,22 +19,39 @@ const Dashboard = ({ curses = [] }: DashboardProps) => (
         <S.Logo>
           <Link href="/" passHref>
             <S.Link>
-              <Logo isNav={true} size="normal" />
+              <MediaMacth greaterThan="medium">
+                <Logo isNav={true} size="normal" />
+              </MediaMacth>
+              <MediaMacth lessThan="medium">
+                <Logo isNav={true} size="small" />
+              </MediaMacth>
             </S.Link>
           </Link>
-          <Heading size="small">My Classes</Heading>
+          <MediaMacth greaterThan="medium">
+            <Heading size="small">My Classes</Heading>
+          </MediaMacth>
         </S.Logo>
       </Container>
     </S.Nav>
     <Container>
       <S.Info>
         <S.LogoYellow>
-          <Image
-            src="/img/logoyellow.png"
-            alt="logo"
-            width={130}
-            height={130}
-          />
+          <MediaMacth greaterThan="medium">
+            <Image
+              src="/img/logoyellow.png"
+              alt="logo"
+              width={130}
+              height={130}
+            />
+          </MediaMacth>
+          <MediaMacth lessThan="medium">
+            <Image
+              src="/img/logoyellow.png"
+              alt="logo"
+              width={90}
+              height={90}
+            />
+          </MediaMacth>
         </S.LogoYellow>
         <S.InfoCenter>
           <S.Titles>
@@ -50,9 +68,11 @@ const Dashboard = ({ curses = [] }: DashboardProps) => (
             }
           />
         </S.InfoCenter>
-        <S.Meeting>
-          <Image src="/img/Meeting.png" alt="logo" width={332} height={182} />
-        </S.Meeting>
+        <MediaMacth greaterThan="medium">
+          <S.Meeting>
+            <Image src="/img/Meeting.png" alt="logo" width={332} height={182} />
+          </S.Meeting>
+        </MediaMacth>
       </S.Info>
       <Grid>
         {curses.length &&
@@ -62,9 +82,14 @@ const Dashboard = ({ curses = [] }: DashboardProps) => (
     <S.Footer>
       <Container>
         <S.Copy>
-          <Heading color="black">
-            Copyright © 2020 Eduick. Todos os direitos reservados.
-          </Heading>
+          <MediaMacth greaterThan="medium">
+            <Heading color="black">
+              Copyright © 2020 Eduick. Todos os direitos reservados.
+            </Heading>
+          </MediaMacth>
+          <MediaMacth lessThan="medium">
+            <Heading color="black">Copyright © 2020 Eduick.</Heading>
+          </MediaMacth>
         </S.Copy>
       </Container>
     </S.Footer>

@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components'
 import * as LogoStyles from 'components/Logo/styles'
 import * as HeadingStyles from 'components/Heading/styles'
 import * as TextContentStyles from 'components/TextContent/styles'
+import * as CardStyles from 'components/Card/styles'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -9,6 +11,12 @@ export const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     background: ${theme.colors.fundoDash};
+    ${media.lessThan('medium')`
+      ${CardStyles.Wrapper} {
+        width: 322px;
+        height: 320px;
+      }
+    `}
   `}
 `
 
@@ -28,7 +36,7 @@ export const Logo = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: row;
-    width: 350px;
+    width: 150px;
     margin-top: 20px;
     ${LogoStyles.Wrapper} {
       width: 20rem;
@@ -37,6 +45,9 @@ export const Logo = styled.div`
       font-family: 'Open Sans';
       font-size: ${theme.font.sizes.small};
     }
+    ${media.greaterThan('medium')`
+      width: 350px;
+    `}
   `}
 `
 
@@ -48,34 +59,50 @@ export const Info = styled.div`
     display: flex;
     flex-direction: row;
     margin-top: 8rem;
+    height: 222px;
+    width: 322px;
+    ${media.greaterThan('medium')`
+      height: 235px;
+      width: 1140px;
+    `}
     background: ${theme.colors.white};
-    height: 235px;
-    width: 100%;
-    width: 1140px;
   `}
 `
 
 export const LogoYellow = styled.div`
   position: absolute;
-  width: 126px;
-  height: 126px;
-  left: -40px;
-  top: 25px;
+  left: 220px;
+  top: -10px;
+  ${media.greaterThan('medium')`
+    width: 126px;
+    height: 126px;
+    left: -40px;
+    top: 25px;
+  `}
 `
 
 export const InfoCenter = styled.div`
-  margin-top: 42px;
-  margin-left: 118px;
+  margin-top: 40px;
+  margin-left: 20px;
   ${TextContentStyles.Wrapper} {
-    margin-left: -30px;
-    width: 450px;
+    font-size: 14px;
+    width: 232px;
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 160%;
+    font-weight: 400;
     color: #343434;
+    padding: 0;
+    margin-top: 5rem;
+    line-height: 22.4px;
   }
+  ${media.greaterThan('medium')`
+    margin-top: 42px;
+    margin-left: 150px;
+    ${TextContentStyles.Wrapper} {
+      width: 450px;
+      font-weight: 400;
+    }
+  `}
 `
 
 export const Titles = styled.div`
@@ -84,6 +111,7 @@ export const Titles = styled.div`
 `
 
 export const FirstTitle = styled.div`
+  font-size: 21px;
   ${HeadingStyles.Wrapper} {
     font-family: 'Poppins';
     font-style: normal;
@@ -93,6 +121,7 @@ export const FirstTitle = styled.div`
 `
 export const SecondTitle = styled.div`
   margin-left: 10px;
+  font-size: 21px;
   ${HeadingStyles.Wrapper} {
     color: #000;
     font-family: 'Poppins';
@@ -107,6 +136,7 @@ export const Meeting = styled.div`
 
 export const Footer = styled.footer`
   ${({ theme }) => css`
+    bottom: 0;
     background: ${theme.colors.white};
     height: 60px;
     ${HeadingStyles.Wrapper} {
